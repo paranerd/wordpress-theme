@@ -70,3 +70,33 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 ```
 
 The third parameter in setting the child-style is the dependency-parameter to make sure the parent-styles are loaded before the child style
+
+## Pagination
+```php
+<div>
+<?php
+// Previous/next page navigation.
+the_posts_pagination(array(
+    'prev_text'          => '<<',
+    'next_text'          => '>>',
+    'before_page_number' => '<span>' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+    'screen_reader_text' => __( ' ' ),
+));
+?>
+</div>
+```
+
+## functions.php
+- contains functions to use in the templates
+```php
+<?php
+// in functions.php
+function get_test() {
+    echo "worx";
+}
+```
+```php
+<?php
+// e.g. in index.php
+echo get_test();
+```

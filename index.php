@@ -18,4 +18,16 @@
     <?php get_sidebar(); ?>
 </div>
 
+<div style="text-align: center;">
+<?php
+// Previous/next page navigation.
+the_posts_pagination( array(
+    'prev_text'          => '<<',
+    'next_text'          => '>>',
+    'before_page_number' => '<span>' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+    'screen_reader_text' => __( ' ' ),
+) );
+?>
+</div>
+
 <?php get_footer(); ?>
